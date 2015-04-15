@@ -7,4 +7,4 @@ app.QuestionView = Backbone.View.extend({
   }
 });
 
-var questionView = new app.QuestionView({model:question});
+var questionView = new app.QuestionView({model:question1});

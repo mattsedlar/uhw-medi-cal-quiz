@@ -12,4 +12,4 @@ app.Questions = Backbone.Collection.extend({
   model: app.Question
 });
 
-var question = new app.Question({question:"Here is the first question"});
+var question1 = new app.Question({question:data[0].question});
