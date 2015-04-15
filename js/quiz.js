@@ -1,4 +1,4 @@
-[
+var data = [
     {
         "question": "Who is covered by Medi-Cal?",
         "choicea": "The disabled",
@@ -41,4 +41,4 @@
         "answer": "B",
         "answernote": "56% of Medi-Cal beneficiaries are female."
     }
-]
+];
