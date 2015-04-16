@@ -57,8 +57,9 @@
     <script>
 
         function startQuiz(){
+            var questionView = new app.QuestionView({model:myQuestions.models[1]});
          questionView.render();
-         $(".lead").slideUp();
+         $(".cover").slideUp();
         }
 
     </script>
