@@ -12,17 +12,22 @@ app.Questions = Backbone.Collection.extend({
   model: app.Question
 });
 
-/* ASSIGN DATA OBJ ATTRIBUTES TO MODEL */
+var question1 = new app.Question(),
+    question2 = new app.Question(),
+    y = 0;
+
+var myQuestions = new app.Questions([question1,question2]);
+
+/* ASSIGN DATA OBJ PROPERTIES TO MODEL */
 
 assignAttr = function(mod, obj) {
   mod.set(obj);
 };
 
+for(x in data) {
+	if(data.hasOwnProperty(x)) {
+	assignAttr(myQuestions.models[y],data[x]);
+	y++;
+	}
+}
 
-var question1 = new app.Question(),
-    question2 = new app.Question();
-
-assignAttr(question1,data.question1);
-assignAttr(question2,data.question2);
-
-var myQuestions = new app.Questions([question1,question2]);

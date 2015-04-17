@@ -9,6 +9,7 @@
     <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
     <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="cover.css"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,6 +22,9 @@
   <body>
     <script type="text/template" id="question_template">
       <h2><%= question %></h2>
+	<div id="choice-container"></div>
+	<div id="answer-container"><%= answernote %></div>
+	<a href="#" id="next" class="btn btn-lg btn-default">Next Question</a>	
     </script>
     <main class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -55,10 +59,18 @@
     <script src="js/app-model.js"></script>
     <script src="js/app-view.js"></script>
     <script>
-
         function startQuiz(){
-            var questionView = new app.QuestionView({model:myQuestions.models[1]});
+         var questionView = new app.QuestionView({model:question1}),
+		l = 1;
          questionView.render();
+		for (x in question1.attributes) {
+			if(question1.attributes.hasOwnProperty(x)){
+			if(x.indexOf("choice") > -1) {
+				$("#choice-container").append("<div class='choice' id='choice" + l + "'>" + question1.attributes[x] + "</div>");
+			l++;
+			}
+			}
+		}
          $(".cover").slideUp();
         }
 
