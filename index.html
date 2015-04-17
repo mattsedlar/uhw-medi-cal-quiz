@@ -24,14 +24,14 @@
       <h2><%= question %></h2>
 	<div id="choice-container"></div>
 	<div id="answer-container"><%= answernote %></div>
-	<a href="#" id="next" class="btn btn-lg btn-default">Next Question</a>	
+	<a href="#" id="next" class="btn btn-lg btn-default">Next Question</a>
     </script>
     <main class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <div class="inner cover">
             <h1 class="cover-heading">Take the Medi-Cal Quiz</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">Think you know everything about California's Medi-Cal program? Take this quiz.</p>
             <p class="lead">
               <a href="#" onclick="startQuiz();" class="btn btn-lg btn-default">Start the Quiz</a>
             </p>
@@ -58,23 +58,7 @@
     <script src="js/quiz.js"></script>
     <script src="js/app-model.js"></script>
     <script src="js/app-view.js"></script>
-    <script>
-        function startQuiz(){
-         var questionView = new app.QuestionView({model:question1}),
-		l = 1;
-         questionView.render();
-		for (x in question1.attributes) {
-			if(question1.attributes.hasOwnProperty(x)){
-			if(x.indexOf("choice") > -1) {
-				$("#choice-container").append("<div class='choice' id='choice" + l + "'>" + question1.attributes[x] + "</div>");
-			l++;
-			}
-			}
-		}
-         $(".cover").slideUp();
-        }
-
-    </script>
+    <script src="js/application.js"></script>
   </body>
 
 </html>
