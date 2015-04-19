@@ -1,15 +1,16 @@
-function startQuiz(){
-    var questionView = new app.QuestionView({model:question1}),
-		l = 1;
+function nextQuestion(model){
+  var questionView = new app.QuestionView({model:model}),
+  l = 1;
     questionView.render();
-		for (x in question1.attributes) {
-			if(question1.attributes.hasOwnProperty(x)){
+		for (x in model.attributes) {
+			if(model.attributes.hasOwnProperty(x)){
         if(x.indexOf("choice") > -1) {
-          $("#choice-container").append("<div class='choice' id='choice" + l + "'>" + question1.attributes[x] + "</div>");
+          $("#choice-container").append("<div class='choice' id='choice" + l + "'>" + model.attributes[x] + "</div>");
           l++;
   			}
 			}
 		}
-   $("#choice" + question1.attributes.answer).attr("data-answer","yes");
+   $("#choice" + model.attributes.answer).attr("data-answer","yes");
+   $("#next").attr("onclick","nextQuestion(question2)");
    $(".cover").slideUp();
 }
