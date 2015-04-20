@@ -1,3 +1,5 @@
+var score = 0, counter = 1;
+
 function nextQuestion(model){
   var questionView = new app.QuestionView({model:model}),
   l = 1;
@@ -5,7 +7,11 @@ function nextQuestion(model){
 		for (x in model.attributes) {
 			if(model.attributes.hasOwnProperty(x)){
         if(x.indexOf("choice") > -1) {
-          $("#choice-container").append("<div class='choice' id='choice" + l + "'>" + model.attributes[x] + "</div>");
+          $("#choice-container").append("<div class='choice' data-answer='no' id='choice"
+                                        + l
+                                        + "'>"
+                                        + model.attributes[x]
+                                        + "</div>");
           l++;
   			}
 			}
@@ -13,4 +19,25 @@ function nextQuestion(model){
    $("#choice" + model.attributes.answer).attr("data-answer","yes");
    $("#next").attr("onclick","nextQuestion(question2)");
    $(".cover").slideUp();
+
+  $(".choice").click(function() {
+    if($(this).attr("data-answer") == "yes") {
+      $(this).css("background-color","lightgreen");
+      $("div[data-answer='no']").css({ opacity: 0.5 });
+      score++;
+    }
+
+    else if($(this).attr("data-answer") == "no") {
+     $(this).css("background-color","red");
+      $("div[data-answer='yes']").css("background-color","lightgreen");
+      $("div[data-answer='no']").css({ opacity: 0.5 });
+    }
+
+    $("#answer-container").css("display","block");
+  });
+
+
 }
+
+
+
