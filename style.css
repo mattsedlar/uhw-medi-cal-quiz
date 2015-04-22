@@ -9,11 +9,11 @@
 }
 
 .choice {
-	background-color: lightblue;
+	background-color: white;
 	width: 98%;
 	padding: 12px;
 	margin: 12px 0;
-	color: darkblue;
+	color: black;
 	font-size: 16px;
   text-shadow: none;
 	border-radius: 12px;
@@ -23,4 +23,8 @@
 
 #next {
   margin-top:12px;
+}
+
+#score-container {
+  display: none;
 }

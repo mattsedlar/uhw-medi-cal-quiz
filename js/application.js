@@ -1,8 +1,18 @@
 var score = 0, counter = 1;
 
 function nextQuestion(model){
+
+  if(counter > 11) {
+
+    $("#question-container").css("display","none");
+    $("#score-container").css("display","block");
+
+  }
+
+  else {
+
   var questionView = new app.QuestionView({model:model}),
-  l = 1;
+      l = 1;
     questionView.render();
 		for (x in model.attributes) {
 			if(model.attributes.hasOwnProperty(x)){
@@ -17,8 +27,12 @@ function nextQuestion(model){
 			}
 		}
    $("#choice" + model.attributes.answer).attr("data-answer","yes");
-   $("#next").attr("onclick","nextQuestion(question2)");
-   $(".cover").slideUp();
+
+   $("#next").attr("onclick","nextQuestion(eval('question' + counter))");
+
+   counter++;
+
+  $(".cover").slideUp();
 
   $(".choice").click(function() {
     if($(this).attr("data-answer") == "yes") {
@@ -36,7 +50,7 @@ function nextQuestion(model){
     $("#answer-container").css("display","block");
   });
 
-
+  }
 }
 
 
