@@ -5,6 +5,7 @@ function nextQuestion(model){
   if(counter > 11) {
 
     $("#question-container").css("display","none");
+    $("#score-container p").html("You got " + score + " correct");
     $("#score-container").css("display","block");
 
   }
@@ -47,7 +48,7 @@ function nextQuestion(model){
       $("div[data-answer='no']").css({ opacity: 0.5 });
     }
 
-    $("#answer-container").css("display","block");
+    $("#answer-container p").fadeTo("slow",1.0);
   });
 
   }
