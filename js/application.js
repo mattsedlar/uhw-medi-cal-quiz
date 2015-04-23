@@ -1,14 +1,17 @@
-var score = 0, counter = 1;
+var score = 0,
+    counter = 1,
+    ansMessage;
 
 function nextQuestion(model){
 
   if(counter > 11) {
 
     $("#question-container").css("display","none");
-    $("#score-container p").html("You got " + score + " correct");
+    $("#score-container h2").html("You got " + score + " correct");
     $("#score-container").css("display","block");
 
   }
+
 
   else {
 
@@ -39,6 +42,7 @@ function nextQuestion(model){
     if($(this).attr("data-answer") == "yes") {
       $(this).css("background-color","lightgreen");
       $("div[data-answer='no']").css({ opacity: 0.5 });
+      ansMessage = "Correct! ";
       score++;
     }
 
@@ -46,9 +50,10 @@ function nextQuestion(model){
      $(this).css("background-color","red");
       $("div[data-answer='yes']").css("background-color","lightgreen");
       $("div[data-answer='no']").css({ opacity: 0.5 });
+      ansMessage = "Sorry. ";
     }
 
-    $("#answer-container p").fadeTo("slow",1.0);
+    $("#answer-container p").fadeTo("slow",1.0).prepend(ansMessage);
   });
 
   }

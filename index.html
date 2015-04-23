@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Take the Medi-Cal Quiz</title>
     <!-- Bootstrap -->
     <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css"/>
@@ -24,7 +24,7 @@
       <h2><%= question %></h2>
 	<div id="choice-container"></div>
 	<div id="answer-container"><p><%= answernote %></p></div>
-	<a href="#" onclick="" id="next" class="btn btn-lg btn-default">Next Question</a>
+	<a href="#" onclick="" id="next" class="btn btn-lg btn-default">Next</a>
     </script>
     <main class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -38,14 +38,14 @@
           </div>
             <div id="question-container"></div>
             <div id="score-container">
-                <h1>TADA!</h1>
-		<p></p>	
-		<form>
-			<input type="text" placeholder="First Name"/>
-			<input type="text" placeholder="Last Name"/>
-			<input type="text" placeholder="Email"/>
-			<input type="submit"/>
-		</form>
+                <h2></h2>
+                <p>Want to learn more about what you can do to improve Medi-Cal in California?</p>
+                <form class="form-signup">
+                    <input type="text" class="form-control" placeholder="First Name"/>
+                    <input type="text" class="form-control" placeholder="Last Name"/>
+                    <input type="email" class="form-control" placeholder="Email"/>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Learn More</button>
+                </form>
             </div>
             <div class="mastfoot">
             <div class="inner">
