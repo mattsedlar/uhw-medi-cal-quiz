@@ -81,8 +81,12 @@ body {
   color: rgba(255,255,255,.5);
 }
 
+.mastfoot p {
+ font-size: 1em;
+}
+
 /*
- * From
+ * Form
 */
 
 .form-signup {
