@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Medi-Cal Quiz
 
 Quiz for educating people about California's Medi-Cal program.
 
@@ -22,7 +20,4 @@ Developed by Matt Sedlar, 2015.
 
 ## License
 
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+Apache License 2.0
