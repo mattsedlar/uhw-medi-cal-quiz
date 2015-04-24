@@ -79,6 +79,10 @@ p {
 
 /* QUIZ STYLES */
 
+#question-container {
+  margin: 0 20px;
+}
+
 #answer-container {
   height: 100px;
 }
@@ -99,6 +103,7 @@ p {
 	margin: 12px 0;
 	color: black;
 	font-size: 1.6em;
+  line-height: 1.5em;
   text-shadow: none;
 	border-radius: 12px;
   box-sizing: border-box;
