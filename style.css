@@ -87,9 +87,9 @@ p {
   opacity: 0.0;
 }
 
-#choice-container {
+#choice-container, #answer-container {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 .choice {
@@ -106,7 +106,7 @@ p {
 }
 
 #next {
-  margin-top:12px;
+  margin-top:6px;
 }
 
 #score-container {

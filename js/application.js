@@ -37,6 +37,7 @@ function nextQuestion(model){
    counter++;
 
   $(".cover").slideUp();
+    $("#next").css({opacity:0.0});
 
   $(".choice").click(function() {
     if($(this).attr("data-answer") == "yes") {
@@ -54,6 +55,8 @@ function nextQuestion(model){
     }
 
     $("#answer-container p").fadeTo("slow",1.0).prepend(ansMessage);
+    $("#next").fadeTo("slow",1.0);
+
   });
 
   }
