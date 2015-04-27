@@ -126,11 +126,10 @@ body {
  */
 
 @media (min-width: 768px) {
-  main { font-size: 62.5%; }
-  /* Pull out the header and footer */
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
+
+  main {
+    font-size: 62.5%;
+    padding-top: 20px;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {

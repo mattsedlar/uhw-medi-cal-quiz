@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Take the Medi-Cal Quiz</title>
+	<meta property="og:title" content="Take the Medi-Cal Quiz"/>
+    <meta property="og:type" content="game"/>
+    <meta property="og:description" content="Think you know everything about California's Medi-Cal program? Take this quiz."/>
+	<meta property="fb:app_id" content="864669480239218" />
     <!-- Bootstrap -->
     <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css"/>
@@ -21,19 +25,39 @@
 
   <body>
       <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <script type="text/template" id="question_template">
-      <h2><%= question %></h2>
-	<div id="choice-container"></div>
-	<div id="answer-container"><p><%= answernote %></p></div>
-	<a href="#" onclick="" id="next" class="btn btn-lg btn-default">Next</a>
-    </script>
+      <!-- FACEBOOK -->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '864669480239218',
+              xfbml      : true,
+              version    : 'v2.3'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+
+            function shareQuiz(score) {
+                FB.ui({
+                    method: 'feed',
+                    link: 'http://perfect-wookie.com.s3-website-us-west-2.amazonaws.com/',
+                    caption: 'I got ' + score + ' correct',
+                    }, function(response){});
+            }
+        </script>
+      <!-- BACKBONE VIEW TEMPLATE -->
+        <script type="text/template" id="question_template">
+            <h2><%= question %></h2>
+            <div id="choice-container"></div>
+            <div id="answer-container"><p><%= answernote %></p></div>
+            <a href="#" onclick="" id="next" class="btn btn-lg btn-default">Next</a>
+        </script>
     <main class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
@@ -57,9 +81,8 @@
             </div>
             <div class="mastfoot">
             <div class="inner">
-                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <p>Share via</p>
+                <div id="facebook" data-layout="button" onclick="shareQuiz(score);"></div>
                 <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
           </div>
