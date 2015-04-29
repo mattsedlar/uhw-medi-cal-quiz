@@ -3,7 +3,7 @@ var data = {
         question: "Who is covered by Medi-Cal?",
         choice1: "The disabled",
         choice2: "Children in poverty",
-        choice3: "Seniors between 55 and 64 years old",
+        choice3: "Seniors between 55<br/> and 64 years old",
         choice4: "All of the above",
         answer: "4",
         answernote: "Medi-Cal covers seniors not yet eligible for Medicare, children, and the disabled."

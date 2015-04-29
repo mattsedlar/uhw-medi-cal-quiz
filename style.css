@@ -54,6 +54,7 @@ Base: 10px, Ratios: 1.6.
 */
 
 html {
+  font-family: "Gotham Black", Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -66,11 +67,14 @@ h1, h2, p {
 }
 
 h1 {
- font-size: 4.096em;
+ font-size: 4.250em;
 }
 
 h2 {
- font-size: 2.56em;
+ font-family: Helvetica, sans-serif;
+ color: #6d6370;
+ font-size: 4.250em;
+ font-weight: bold;
 }
 
 p {
@@ -83,31 +87,47 @@ p {
   margin: 0 20px;
 }
 
-#answer-container {
-  height: 100px;
-}
-
 #answer-container p {
-  opacity: 0.0;
+  display: none;
 }
 
 #choice-container, #answer-container {
-  text-align: center;
+  text-align: right;
   margin: 0 20px;
 }
 
+#choice1 {
+  background-color: #ff6712;
+}
+
+#choice2 {
+  background-color: #5f56aa;
+}
+
+#choice3 {
+  background-color: #00a5bc;
+}
+
+#choice4 {
+ background-color: #9ed345;
+}
+
 .choice {
-	background-color: white;
-	width: 98%;
-	padding: 12px;
-	margin: 12px 0;
-	color: black;
-	font-size: 1.6em;
+  text-align: right;
+  height: auto;
+	padding: 24px;
+  margin: 12px 0px;
+	color: white;
+  font-weight: bold;
+	font-size: 3em;
   line-height: 1.5em;
   text-shadow: none;
-	border-radius: 12px;
   box-sizing: border-box;
   cursor: pointer;
+  background: -webkit-linear-gradient(right,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Fx 3.6-15*/
+  background: linear-gradient(to left, rgba(0,0,0,0.30), rgba(255,255,255,0)); /*Standard*/
 }
 
 #next {
@@ -129,4 +149,15 @@ p {
 
 #facebook {
   background: url(img/social-logos.png) top left;
+}
+
+@media (min-width: 992px) {
+
+  #choice-container {
+   margin-top: 75px;
+  }
+
+  .choice {
+    margin: 12px 0px 12px 35%;
+  }
 }

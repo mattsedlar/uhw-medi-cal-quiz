@@ -27,12 +27,13 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background: -o-radial-gradient(#FFF,#CCC); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FFF,#CCC); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FFF,#CCC); /* Standard syntax */
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -145,6 +146,6 @@ body {
 @media (min-width: 992px) {
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 960px;
   }
 }

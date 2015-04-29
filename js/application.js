@@ -41,9 +41,8 @@ function nextQuestion(model){
 
   $(".choice").click(function() {
     if($(this).attr("data-answer") == "yes") {
-      $(this).css("background-color","lightgreen");
-      $("div[data-answer='no']").css({ opacity: 0.5 });
-      ansMessage = "Correct! ";
+      $(this).html($("#answer-container p").html());
+      $(this).animate({ marginLeft:'0px'});
       score++;
     }
 
@@ -54,7 +53,6 @@ function nextQuestion(model){
       ansMessage = "Sorry. ";
     }
 
-    $("#answer-container p").fadeTo("slow",1.0).prepend(ansMessage);
     $("#next").fadeTo("slow",1.0);
 
   });
