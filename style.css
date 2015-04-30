@@ -73,7 +73,7 @@ h1 {
 h2 {
  font-family: Helvetica, sans-serif;
  color: #6d6370;
- font-size: 4.250em;
+ font-size: 3.25em;
  font-weight: bold;
 }
 
@@ -96,38 +96,82 @@ p {
   margin: 0 20px;
 }
 
+#choice1:before {
+ background: url(img/g266.png) 0 0;
+  content: " ";
+  width: 100px;
+  height: 105px;
+  position: absolute;
+  top: -35px;
+  left: 0px;
+}
+
 #choice1 {
   background-color: #ff6712;
+  position:relative;
+}
+
+#choice2:before {
+ background: url(img/g266.png) 0 -110px;
+  content: " ";
+  width: 100px;
+  height: 105px;
+  position: absolute;
+  top: -35px;
+  left: 0px;
 }
 
 #choice2 {
   background-color: #5f56aa;
+  position: relative;
+}
+
+#choice3:before {
+ background: url(img/g266.png) 0 -220px;
+  content: " ";
+  width: 100px;
+  height: 105px;
+  position: absolute;
+  top: -35px;
+  left: 0px;
 }
 
 #choice3 {
   background-color: #00a5bc;
+  position: relative;
+}
+
+#choice4:before {
+ background: url(img/g266.png) 0 -330px;
+  content: " ";
+  width: 100px;
+  height: 105px;
+  position: absolute;
+  top: -35px;
+  left: 0px;
 }
 
 #choice4 {
  background-color: #9ed345;
+  position: relative;
 }
 
 .choice {
   text-align: right;
-  height: auto;
-	padding: 24px;
+  height: 72px;
+	padding: 12px 12px 12px 100px;
   margin: 12px 0px;
 	color: white;
   font-weight: bold;
-	font-size: 3em;
-  line-height: 1.5em;
+	font-size: 2.25em;
+  line-height: 1.1em;
   text-shadow: none;
   box-sizing: border-box;
   cursor: pointer;
-  background: -webkit-linear-gradient(right,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0)); /*Fx 3.6-15*/
-  background: linear-gradient(to left, rgba(0,0,0,0.30), rgba(255,255,255,0)); /*Standard*/
+  background: -webkit-linear-gradient(right,rgba(0,0,0,0.30),rgba(255,255,255,0),rgba(0,0,0,0.30)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0),rgba(0,0,0,0.30)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,rgba(0,0,0,0.30),rgba(255,255,255,0),rgba(0,0,0,0.30)); /*Fx 3.6-15*/
+  background: linear-gradient(to left, rgba(0,0,0,0.30), rgba(255,255,255,0),rgba(0,0,0,0.30)); /*Standard*/
 }
 
 #next {
