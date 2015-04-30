@@ -41,16 +41,16 @@ function nextQuestion(model){
 
   $(".choice").click(function() {
     if($(this).attr("data-answer") == "yes") {
-      $(this).html($("#answer-container p").html());
       $(this).animate({ marginLeft:'0px'});
+      $(this).css({ 'color': 'black', 'font-size': '1.777em' });
+      $(this).html($("#answer-container p").html());
       score++;
     }
 
     else if($(this).attr("data-answer") == "no") {
      $(this).css("background-color","red");
-      $("div[data-answer='yes']").css("background-color","lightgreen");
+      $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'color': 'black', 'font-size': '1.777em' }).html($("#answer-container p").html());
       $("div[data-answer='no']").css({ opacity: 0.5 });
-      ansMessage = "Sorry. ";
     }
 
     $("#next").fadeTo("slow",1.0);

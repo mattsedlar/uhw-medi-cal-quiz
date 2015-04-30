@@ -59,7 +59,7 @@ html {
 }
 
 main {
- font-size: 60%;
+ font-size: 62.5%;
 }
 
 h1, h2, p {
@@ -67,18 +67,21 @@ h1, h2, p {
 }
 
 h1 {
- font-size: 4.250em;
+ font-size: 2.63em;
+  font-weight: bold;
+ color: #6d6370;
 }
 
 h2 {
  font-family: Helvetica, sans-serif;
  color: #6d6370;
- font-size: 3.25em;
+ font-size: 1.973em;
  font-weight: bold;
 }
 
 p {
- font-size: 1.6em;
+ color: black;
+ font-size: 1.48em;
 }
 
 /* QUIZ STYLES */
@@ -163,7 +166,7 @@ p {
   margin: 12px 0px;
 	color: white;
   font-weight: bold;
-	font-size: 2.25em;
+	font-size: 1.48em;
   line-height: 1.1em;
   text-shadow: none;
   box-sizing: border-box;
@@ -195,7 +198,11 @@ p {
   background: url(img/social-logos.png) top left;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+
+  h1 { font-size: 4.209em; }
+  h2 { font-size: 3.157em; }
+  p, .choice { font-size: 2.369em; }
 
   #choice-container {
    margin-top: 75px;
