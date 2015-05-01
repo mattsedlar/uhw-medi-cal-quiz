@@ -31,6 +31,7 @@ function nextQuestion(model){
 			}
 		}
    $("#choice" + model.attributes.answer).attr("data-answer","yes");
+   $("#count").html(counter);
 
    $("#next").attr("onclick","nextQuestion(eval('question' + counter))");
 

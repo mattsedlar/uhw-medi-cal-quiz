@@ -53,7 +53,7 @@
         </script>
       <!-- BACKBONE VIEW TEMPLATE -->
         <script type="text/template" id="question_template">
-            <h2><%= question %></h2>
+            <span id="count">1</span><h2><%= question %></h2>
             <div id="choice-container"></div>
             <div id="answer-container"><p><%= answernote %></p></div>
             <a href="#" onclick="" id="next" class="btn btn-lg btn-default">Next</a>
@@ -83,8 +83,7 @@
             <div class="inner">
                 <p>Share via</p>
                 <div id="facebook" data-layout="button" onclick="shareQuiz(score);"></div>
-                <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
+             </div>
           </div>
         </div>
       </div>
