@@ -59,7 +59,7 @@ html {
 }
 
 main {
- font-size: 62.5%;
+ font-size: 50.5%;
 }
 
 h1, h2, p {
@@ -77,6 +77,7 @@ h2 {
  color: #6d6370;
  font-size: 1.973em;
  font-weight: bold;
+ margin-top: 24px;
 }
 
 p {
@@ -94,9 +95,9 @@ p {
   display: none;
 }
 
-#choice-container, #answer-container {
+#choice-container {
   text-align: right;
-  margin: 0 20px;
+  margin: 65px 20px 0 20px;
 }
 
 #choice1:before {
@@ -167,7 +168,7 @@ p {
 	color: white;
   font-weight: bold;
 	font-size: 1.48em;
-  line-height: 1.1em;
+  line-height: 1.3em;
   text-shadow: none;
   box-sizing: border-box;
   cursor: pointer;
@@ -202,7 +203,7 @@ p {
 
   h1 { font-size: 4.209em; }
   h2 { font-size: 3.157em; }
-  p, .choice { font-size: 2.369em; }
+  p, .choice { font-size: 2.1em; }
 
   #choice-container {
    margin-top: 75px;
