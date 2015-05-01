@@ -44,9 +44,9 @@ function nextQuestion(model){
     if($(this).attr("data-answer") == "yes") {
       $(this).animate({ marginLeft:'0px'});
       if ( $(window).width() < 768 ) {
-        $(this).css({ 'color': 'black', 'font-size': '1em' });
+        $(this).css({ 'font-size': '1.25em' });
       }
-      else { $(this).css({ 'color': 'black', 'font-size': '1.777em' }); }
+      else { $(this).css({ 'font-size': '1.777em' }); }
 
       $(this).html($("#answer-container p").html());
       score++;
@@ -55,10 +55,10 @@ function nextQuestion(model){
     else if($(this).attr("data-answer") == "no") {
      $(this).css("background-color","red");
       if ( $(window).width() < 768 ) {
-        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'color': 'black', 'font-size': '1em' }).html($("#answer-container p").html());
+        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.25em' }).html($("#answer-container p").html());
       }
       else {
-        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'color': 'black', 'font-size': '1.777em' }).html($("#answer-container p").html());
+        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.777em' }).html($("#answer-container p").html());
       }
       $("div[data-answer='no']").css({ opacity: 0.5 });
     }
