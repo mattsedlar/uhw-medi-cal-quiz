@@ -43,11 +43,12 @@
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
 
-            function shareQuiz(score) {
+            function fbshareQuiz(score) {
                 FB.ui({
                     method: 'feed',
                     link: 'http://perfect-wookie.com.s3-website-us-west-2.amazonaws.com/',
-                    caption: 'I got ' + score + ' correct',
+                    name: 'I got ' + score + ' correct',
+                    caption: 'Take the Medi-Cal Quiz'
                     }, function(response){});
             }
         </script>
@@ -82,8 +83,9 @@
             <div class="mastfoot">
             <div class="inner">
                 <p>Share via</p>
-                <div id="facebook" data-layout="button" onclick="shareQuiz(score);"></div>
-             </div>
+                <div id="facebook" data-layout="button" onclick="fbshareQuiz(score);"></div>
+                <div id="twitter" data-layout="button" onclick=""></div>
+            </div>
           </div>
         </div>
       </div>

@@ -188,6 +188,7 @@ p {
 /* SOCIAL ICONS */
 
 #facebook, #twitter {
+    margin-top: 6px;
     height: 50px;
     width: 50px;
     display: inline-block;
@@ -195,7 +196,12 @@ p {
 }
 
 #facebook {
-  background: url(../img/social-logos.png) top left;
+  background: url(../img/social-logos.png) 0 0;
+}
+
+#twitter {
+  background: url(../img/social-logos.png) 0 50px;
+  margin-left: 6px;
 }
 
 @media (min-width: 768px) {
