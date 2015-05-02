@@ -124,19 +124,19 @@ p {
 }
 
 #choice1:before {
-  background: url(img/g266.png) 0 0;
+  background: url(../img/g266.png) 0 0;
 }
 
 #choice2:before {
- background: url(img/g266.png) 0 -110px;
+ background: url(../img/g266.png) 0 -110px;
 }
 
 #choice3:before {
- background: url(img/g266.png) 0 -220px;
+ background: url(../img/g266.png) 0 -220px;
 }
 
 #choice4:before {
- background: url(img/g266.png) 0 -330px;
+ background: url(../img/g266.png) 0 -330px;
 }
 
 #choice1 {
@@ -195,7 +195,7 @@ p {
 }
 
 #facebook {
-  background: url(img/social-logos.png) top left;
+  background: url(../img/social-logos.png) top left;
 }
 
 @media (min-width: 768px) {
