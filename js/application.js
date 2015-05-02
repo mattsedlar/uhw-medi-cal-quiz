@@ -31,7 +31,7 @@ function nextQuestion(model){
 			}
 		}
    $("#choice" + model.attributes.answer).attr("data-answer","yes");
-   $("#count").html(counter);
+   $("#count").html(counter + " ");
 
    $("#next").attr("onclick","nextQuestion(eval('question' + counter))");
 
@@ -44,7 +44,7 @@ function nextQuestion(model){
     if($(this).attr("data-answer") == "yes") {
       $(this).animate({ marginLeft:'0px'});
       if ( $(window).width() < 768 ) {
-        $(this).css({ 'font-size': '1.25em' });
+        $(this).css({ 'font-weight': 'normal','font-size': '1em' });
       }
       else { $(this).css({ 'font-size': '1.777em' }); }
 

@@ -59,7 +59,7 @@ html {
 }
 
 main {
- font-size: 50.5%;
+ font-size: 62.5%;
 }
 
 h1, h2, p {
@@ -87,23 +87,22 @@ p {
 
 /* QUIZ STYLES */
 
-#question-container {
+#question-container, #score-container {
   margin: 0 20px;
 }
 
 #count {
   color: lightgrey;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  font-size: 6em;
+  font-size: 3.5em;
   opacity: 0.75;
-  padding:20px 0 0 12px;
+  left: -12px;
   position: absolute;
 }
 
 #question-container h2 {
-  width: auto;
-  display: inline-block;
-  margin-left: 50px;
+  padding-left: 14%;
+  position: relative;
 }
 
 #answer-container p {
@@ -163,11 +162,11 @@ p {
 .choice {
   text-align: right;
   height: 72px;
-	padding: 12px 12px 12px 100px;
+	padding: 12px 12px 12px 92px;
   margin: 12px 0px;
 	color: white;
   font-weight: bold;
-	font-size: 1.48em;
+	font-size: 1.45em;
   line-height: 1.3em;
   text-shadow: none;
   box-sizing: border-box;
@@ -201,11 +200,11 @@ p {
 
 @media (min-width: 768px) {
 
+  main { font-size: 55%; }
+
   h1 { font-size: 4.209em; }
   h2 { font-size: 3.157em; }
-  p, .choice { font-size: 2.1em; }
-
-  #question-container h2 { margin-left: 60px; }
+  p, .choice { font-size: 2.2em; }
 
   #choice-container {
    margin-top: 75px;

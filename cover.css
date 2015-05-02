@@ -129,7 +129,6 @@ body {
 @media (min-width: 768px) {
 
   main {
-    font-size: 62.5%;
     padding-top: 20px;
   }
   /* Start the vertical centering */
@@ -146,6 +145,6 @@ body {
 @media (min-width: 992px) {
   .mastfoot,
   .cover-container {
-    width: 960px;
+    width: 768px;
   }
 }
