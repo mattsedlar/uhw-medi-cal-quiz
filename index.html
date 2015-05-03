@@ -42,15 +42,6 @@
              js.src = "//connect.facebook.net/en_US/sdk.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
-
-            function fbshareQuiz(score) {
-                FB.ui({
-                    method: 'feed',
-                    link: 'http://perfect-wookie.com.s3-website-us-west-2.amazonaws.com/',
-                    name: 'I got ' + score + ' correct',
-                    caption: 'Take the Medi-Cal Quiz'
-                    }, function(response){});
-            }
         </script>
       <!-- BACKBONE VIEW TEMPLATE -->
         <script type="text/template" id="question_template">
@@ -83,8 +74,8 @@
             <div class="mastfoot">
             <div class="inner">
                 <p>Share via</p>
-                <div id="facebook" data-layout="button" onclick="fbshareQuiz(score);"></div>
-                <div id="twitter" data-layout="button" onclick=""></div>
+                <div id="facebook" data-layout="button"></div>
+                <div id="twitter" data-layout="button"></div>
             </div>
           </div>
         </div>

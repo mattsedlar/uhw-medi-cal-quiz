@@ -90,6 +90,26 @@ $(document).ready( function() {
     window.open(url, 'twitter', opts);
 
     });
+
+    $("#facebook").click( function() {
+          FB.ui({
+              method: 'feed',
+              link: 'http://perfect-wookie.com.s3-website-us-west-2.amazonaws.com/',
+              name: 'I got ' + score + ' out of 11 correct',
+              caption: 'Take the Medi-Cal Quiz'
+              }, function(response){});
+    });
+
+// form validation workaround for Safari
+
+  var form = document.getElementsByClassName('form-signup');
+  form.noValidate = true;
+  form.addEventListener('submit', function(event) { // listen for form submitting
+        if (!event.target.checkValidity()) {
+            event.preventDefault(); // dismiss the default functionality
+            alert('Please, fill out the form'); // error message
+        }
+    }, false);
 });
 
 
