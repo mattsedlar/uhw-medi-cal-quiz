@@ -70,5 +70,27 @@ function nextQuestion(model){
   }
 }
 
+$(document).ready( function() {
+    $("#twitter").click( function() {
+        var twitterUrl = "http://twitter.com/share/?",
+        text = "text=I got " + score + " out of 11 correct. How much do you know about Medi-Cal? Take the quiz ",
+        quizUrl = "&url=http://example.com";
+
+        var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = twitterUrl + text + quizUrl,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+
+    window.open(url, 'twitter', opts);
+
+    });
+});
+
 
 
