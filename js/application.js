@@ -46,7 +46,7 @@ function nextQuestion(model){
       if ( $(window).width() < 768 ) {
         $(this).css({ 'font-weight': 'normal','font-size': '1em' });
       }
-      else { $(this).css({ 'font-size': '1.777em' }); }
+      else { $(this).css({ 'font-size': '1.46em' }); }
 
       $(this).html($("#answer-container p").html());
       score++;
@@ -58,7 +58,7 @@ function nextQuestion(model){
         $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-weight': 'normal','font-size': '1em' }).html($("#answer-container p").html());
       }
       else {
-        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.777em' }).html($("#answer-container p").html());
+        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.46em' }).html($("#answer-container p").html());
       }
       $("div[data-answer='no']").css({ opacity: 0.5 });
     }
