@@ -44,18 +44,19 @@ function nextQuestion(model){
     if($(this).attr("data-answer") == "yes") {
       $(this).animate({ marginLeft:'0px'});
       if ( $(window).width() < 768 ) {
-        $(this).css({ 'font-weight': 'normal','font-size': '1em' });
+        $("#answer-container p").prepend("Correct! ").css({"display":"block","height":"auto","color":"black"}).fadeIn();
       }
-      else { $(this).css({ 'font-size': '1.46em' }); }
+      else {
+        $(this).html($("#answer-container p").html());
+       }
 
-      $(this).html($("#answer-container p").html());
       score++;
     }
 
     else if($(this).attr("data-answer") == "no") {
      $(this).css("background-color","red");
       if ( $(window).width() < 768 ) {
-        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-weight': 'normal','font-size': '1em' }).html($("#answer-container p").html());
+        $("#answer-container p").prepend("Sorry! ").css({"display":"block","height":"auto","color":"black"}).fadeIn();
       }
       else {
         $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.46em' }).html($("#answer-container p").html());
