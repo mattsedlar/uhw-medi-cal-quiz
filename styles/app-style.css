@@ -85,6 +85,10 @@ p {
  font-size: 1.48em;
 }
 
+p.lead {
+ margin-top: 12px;
+}
+
 /* QUIZ STYLES */
 
 #question-container, #score-container {
