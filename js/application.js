@@ -33,7 +33,6 @@ var clickHandler = function () {
     }
 
     $("#next").fadeTo("slow",1.0);
-    $("#next").animate({borderWidth: '2px'});
     $(".choice").unbind("click", clickHandler);
 }
 

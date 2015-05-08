@@ -189,12 +189,7 @@ p.lead {
 
 #next {
   margin-top:6px;
-  border: 0px solid #7FB2DC;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 5px #888;
-  -webkit-box-shadow: 1px 1px 5px #888;
-  -moz-box-shadow: 1px 1px 5px #888;
-
+  border: 3px solid #EEE;
 }
 
 #next:hover, #start:hover {
