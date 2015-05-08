@@ -5,6 +5,7 @@ var score = 0,
 // this will be called in bind() and removed unbind()
 var clickHandler = function () {
      if($(this).attr("data-answer") == "yes") {
+      $("div[data-answer='no']").css({ opacity: 0.5 });
       $(this).animate({ marginLeft:'0px'}, function(){
       if ( $(window).width() < 768 ) {
         $("#answer-container p").prepend("Correct! ").css({"display":"block","height":"auto","color":"black"}).fadeIn();
@@ -28,11 +29,11 @@ var clickHandler = function () {
           $("div[data-answer='yes']").find("div").html($("#answer-container p").html()).css({ 'font-size': '70%', "line-height" : "1.25em" }).fadeIn(1000);
         });
       }
-
       $("div[data-answer='no']").css({ opacity: 0.5 });
     }
 
     $("#next").fadeTo("slow",1.0);
+    $("#next").animate({borderWidth: '2px'});
     $(".choice").unbind("click", clickHandler);
 }
 
@@ -41,7 +42,7 @@ function nextQuestion(model){
   if(counter > 11) {
 
     $("#question-container").css("display","none");
-    $("#score-container h2").html("You got " + score + " correct");
+    $("#score-container h2").html("You got " + score + "/11 correct");
     $("#score-container").css("display","block");
 
   }

@@ -182,11 +182,21 @@ p.lead {
 }
 
 .choice:hover {
- opacity: 0.90;
+box-shadow: 3px 3px 5px #888;
+  -webkit-box-shadow: 3px 3px 5px #888;
+    -moz-box-shadow: 3px 3px 5px #888;
 }
 
 #next {
   margin-top:6px;
+  border: 0px solid #7FB2DC;
+  box-sizing: border-box;
+box-shadow: 1px 1px 5px #888;
+}
+
+#next:hover, #start:hover {
+ background-color: #2C689D;
+ border-color: #286090;
 }
 
 #score-container {
