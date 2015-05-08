@@ -182,16 +182,19 @@ p.lead {
 }
 
 .choice:hover {
-box-shadow: 3px 3px 5px #888;
+  box-shadow: 3px 3px 5px #888;
   -webkit-box-shadow: 3px 3px 5px #888;
-    -moz-box-shadow: 3px 3px 5px #888;
+  -moz-box-shadow: 3px 3px 5px #888;
 }
 
 #next {
   margin-top:6px;
   border: 0px solid #7FB2DC;
   box-sizing: border-box;
-box-shadow: 1px 1px 5px #888;
+  box-shadow: 1px 1px 5px #888;
+  -webkit-box-shadow: 1px 1px 5px #888;
+  -moz-box-shadow: 1px 1px 5px #888;
+
 }
 
 #next:hover, #start:hover {
