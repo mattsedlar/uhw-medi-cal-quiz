@@ -6,22 +6,22 @@ var score = 0,
 var clickHandler = function () {
      if($(this).attr("data-answer") == "yes") {
       $("div[data-answer='no']").css({ opacity: 0.5 });
-      $(this).animate({ marginLeft:'0px'}, function(){
       if ( $(window).width() < 768 ) {
-        $("#answer-container p").prepend("Correct! ").css({"display":"block","height":"auto","color":"black"}).fadeIn();
+        $("#answer-container p").prepend("Correct! ").css({"display":"block","height":"auto","color":"black"});
       }
       else {
+        $(this).animate({ marginLeft:'0px'}, function(){
         $(this).find("div").hide().fadeOut(3000);
         $(this).find("div").html($("#answer-container p").html()).css({"font-size":"70%", "line-height":"1.25em"}).fadeIn(1000);
-       }
+       });
+      }
       score++;
-    });
     }
 
     else if($(this).attr("data-answer") == "no") {
      $(this).css("background-color","red");
       if ( $(window).width() < 768 ) {
-        $("#answer-container p").prepend("Sorry! ").css({"display":"block","height":"auto","color":"black"}).fadeIn();
+        $("#answer-container p").prepend("Sorry! ").css({"display":"block","height":"auto","color":"black"});
       }
       else {
         $("div[data-answer='yes']").animate({marginLeft: '0px'}, function(){
