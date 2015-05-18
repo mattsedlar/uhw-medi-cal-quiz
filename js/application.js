@@ -48,6 +48,7 @@ function nextQuestion(model){
 
   else {
 
+  $(".cover-container").css({"background":"none", "height" : "auto"});
   var questionView = new app.QuestionView({model:model}),
       l = 1;
     questionView.render();
@@ -72,7 +73,7 @@ function nextQuestion(model){
 
    counter++;
 
-  $(".cover").slideUp();
+    $(".cover").hide();
     $("#next").css({opacity:0.0});
 
   $(".choice").bind("click", clickHandler);

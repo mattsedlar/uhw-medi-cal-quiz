@@ -134,10 +134,20 @@ body {
     vertical-align: middle;
   }
   /* Handle the widths */
-  .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    background: url(../img/Quiz-BG-Jenevy-gray.jpg) no-repeat center center;
+    height: 409px;
+    background-size: cover;
   }
+  .cover {
+    padding: 135px 20px 0px 20px;
+  }
+
+  .cover-heading, .lead {
+    color: #fff;
+  }
+
 }
 
 @media (min-width: 992px) {
