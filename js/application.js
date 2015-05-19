@@ -43,6 +43,7 @@ function nextQuestion(model){
     $("#question-container").css("display","none");
     $("#score-container h2").html("You got " + score + "/11 correct");
     $("#score-container").css("display","block");
+    ga('send', 'event', 'button', 'click', 'finish-quiz', score);
 
   }
 
@@ -99,8 +100,10 @@ $(document).ready( function() {
                  ',left='   + left;
 
     window.open(url, 'twitter', opts);
+    ga('send', 'event', 'button', 'click', 'twitter-share', score);
 
     });
+
 
     $("#facebook").click( function() {
           FB.ui({
@@ -109,6 +112,7 @@ $(document).ready( function() {
               name: 'I got ' + score + ' out of 11 correct',
               caption: 'Take the Medi-Cal Quiz'
               }, function(response){});
+              ga('send', 'event', 'button', 'click', 'facebook-share', score);
     });
 
   $(function () {
