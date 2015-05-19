@@ -111,16 +111,17 @@ $(document).ready( function() {
               }, function(response){});
     });
 
-// form validation workaround for Safari
-
-  var form = document.getElementsByClassName('form-signup');
-  form.noValidate = true;
-  form.addEventListener('submit', function(event) { // listen for form submitting
-        if (!event.target.checkValidity()) {
-            event.preventDefault(); // dismiss the default functionality
-            alert('Please, fill out the form'); // error message
+  $(function () {
+    $('.form-signup').submit(function () {
+        if($(this).valid()) {
+          $(this).remove();
+          $("#form-lead").html("Now let your friends know how you did!");
+          $("#score-container p").last().hide();
         }
-    }, false);
+    });
+});
+
+
 });
 
 
