@@ -86,7 +86,7 @@ $(document).ready( function() {
     $("#twitter").click( function() {
         var twitterUrl = "http://twitter.com/share/?",
         text = "text=I got " + score + " out of 11 correct. How much do you know about Medi-Cal? Take the quiz ",
-        quizUrl = "&url=http://example.com";
+        quizUrl = "&url=http://seiuuhw.org/medi-cal-quiz/";
 
         var width  = 575,
         height = 400,
@@ -108,9 +108,10 @@ $(document).ready( function() {
     $("#facebook").click( function() {
           FB.ui({
               method: 'feed',
-              link: 'http://perfect-wookie.com.s3-website-us-west-2.amazonaws.com/',
+              link: 'http://seiuuhw.org/medi-cal-quiz/',
               name: 'I got ' + score + ' out of 11 correct',
-              caption: 'Take the Medi-Cal Quiz'
+              caption: 'Take the Medi-Cal Quiz',
+              picture: 'http://seiuuhw.org/medi-cal-quiz/img/Quiz-BG-Jenevy-gray.jpg'
               }, function(response){});
               ga('send', 'event', 'button', 'click', 'facebook-share', score);
     });
