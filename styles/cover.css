@@ -129,6 +129,9 @@ body {
   main {
     padding-top: 20px;
   }
+  .site-wrapper {
+      background: #000 url(../img/Quiz-BG-Jenevy-gray-full.jpg) no-repeat top center;
+  }
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
@@ -136,9 +139,6 @@ body {
   /* Handle the widths */
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
-    background: url(../img/Quiz-BG-Jenevy-gray.jpg) no-repeat center center;
-    height: 409px;
-    background-size: cover;
   }
   .cover {
     padding: 135px 20px 0px 20px;

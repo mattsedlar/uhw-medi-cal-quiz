@@ -2,53 +2,19 @@ var score = 0,
     counter = 1,
     ansMessage;
 
-// this will be called in bind() and removed unbind()
-var clickHandler = function () {
-     if($(this).attr("data-answer") == "yes") {
-      $("div[data-answer='no']").css({ opacity: 0.5 });
-      if ( $(window).width() < 768 ) {
-        $("#answer-container p").prepend("Correct! ").css({"display":"block","height":"auto","color":"black"});
-      }
-      else {
-        $(this).animate({ marginLeft:'0px'}, function(){
-        $(this).find("div").hide().fadeOut(3000);
-        $(this).find("div").html($("#answer-container p").html()).css({"font-size":"70%", "line-height":"1.25em"}).fadeIn(1000);
-       });
-      }
-      score++;
-    }
-
-    else if($(this).attr("data-answer") == "no") {
-     $(this).css("background-color","red");
-      if ( $(window).width() < 768 ) {
-        $("#answer-container p").prepend("Sorry! ").css({"display":"block","height":"auto","color":"black"});
-      }
-      else {
-        $("div[data-answer='yes']").animate({marginLeft: '0px'}, function(){
-          $("div[data-answer='yes']").find("div").hide().fadeOut(3000);
-          $("div[data-answer='yes']").find("div").html($("#answer-container p").html()).css({ 'font-size': '70%', "line-height" : "1.25em" }).fadeIn(1000);
-        });
-      }
-      $("div[data-answer='no']").css({ opacity: 0.5 });
-    }
-
-    $("#next").fadeTo("slow",1.0);
-    $(".choice").unbind("click", clickHandler);
-}
-
 function nextQuestion(model){
 
   if(counter > 11) {
 
     $("#question-container").css("display","none");
-    $("#score-container h2").html("You got " + score + "/11 correct");
+    $("#score-container h2").html("You got " + score + " correct");
     $("#score-container").css("display","block");
 
   }
 
+
   else {
 
-  $(".site-wrapper").css({"background":"none"});
   var questionView = new app.QuestionView({model:model}),
       l = 1;
     questionView.render();
@@ -57,15 +23,13 @@ function nextQuestion(model){
         if(x.indexOf("choice") > -1) {
           $("#choice-container").append("<div class='choice' data-answer='no' id='choice"
                                         + l
-                                        + "'><div>"
+                                        + "'>"
                                         + model.attributes[x]
-                                        + "</div></div>");
+                                        + "</div>");
           l++;
   			}
 			}
 		}
-
-
    $("#choice" + model.attributes.answer).attr("data-answer","yes");
    $("#count").html(counter + " ");
 
@@ -73,10 +37,35 @@ function nextQuestion(model){
 
    counter++;
 
-    $(".cover").hide();
+  $(".cover").slideUp();
     $("#next").css({opacity:0.0});
 
-  $(".choice").bind("click", clickHandler);
+  $(".choice").click(function() {
+    if($(this).attr("data-answer") == "yes") {
+      $(this).animate({ marginLeft:'0px'});
+      if ( $(window).width() < 768 ) {
+        $(this).css({ 'font-weight': 'normal','font-size': '1em' });
+      }
+      else { $(this).css({ 'font-size': '1.45em' }); }
+
+      $(this).html($("#answer-container p").html());
+      score++;
+    }
+
+    else if($(this).attr("data-answer") == "no") {
+     $(this).css("background-color","red");
+      if ( $(window).width() < 768 ) {
+        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-weight': 'normal','font-size': '1em' }).html($("#answer-container p").html());
+      }
+      else {
+        $("div[data-answer='yes']").animate({marginLeft: '0px'}).css({ 'font-size': '1.45em' }).html($("#answer-container p").html());
+      }
+      $("div[data-answer='no']").css({ opacity: 0.5 });
+    }
+
+    $("#next").fadeTo("slow",1.0);
+
+  });
 
   }
 }
