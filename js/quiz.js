@@ -27,17 +27,17 @@ var data = {
     question4: {
         question: "How many California children get health coverage through Medi-Cal?",
         choice1: "One in ten",
-        choice2: "One in five",
-        choice3: "One in two",
-        answer: "3",
+        choice2: "One in two",
+        choice3: "One in five",
+        answer: "2",
         answernote: "One in two California children is covered through Medi-Cal."
     },
     question5: {
         question: "How many Californians live in an area with a shortage of primary care doctors?",
-        choice1: "5 million",
+        choice1: "18 million",
         choice2: "11 million",
-        choice3: "18 million",
-        answer: "3",
+        choice3: "5 million",
+        answer: "1",
         answernote: "Almost 18 million Californians live in an area with a shortage of primary care doctors."
     },
     question6: {
@@ -50,10 +50,10 @@ var data = {
     },
     question7: {
         question: "California doctors lose $_____ per year because Medi-Cal is not fully funded.",
-        choice1: "$5 million",
-        choice2: "$1 billion",
-        choice3: "$5 billion",
-        answer: "3",
+        choice1: "$1 billion",
+        choice2: "$5 billion",
+        choice3: "$5 million",
+        answer: "2",
         answernote: "Because Medi-Cal payment rates are so low, doctors in California lose $5.2 billion every year due to Medi-Cal underfunding."
     },
     question8: {
@@ -82,9 +82,9 @@ var data = {
     },
     question11: {
         question: "California hospitals receive _____ of their net funding from Medi-Cal.",
-        choice1: "10%",
+        choice1: "40%",
         choice2: "20%",
-        choice3: "40%",
+        choice3: "10%",
         answer: "2",
         answernote: "Hospitals rely on Medi-Cal for 20% of their annual net funding."
     }
